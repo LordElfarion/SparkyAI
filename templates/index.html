@@ -1,58 +1,31 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Autonomous AI Agent</title>
+    <title>SparkyAI</title>
     <link rel="stylesheet" href="/static/css/main.css">
-    <link rel="stylesheet" href="/static/css/chat.css">
-    <link rel="stylesheet" href="/static/css/sidebar.css">
-    <link rel="stylesheet" href="/static/css/panels.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/default.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
-    <style>
-    /* Connection status indicator */
-    .connection-indicator {
-        position: fixed;
-        bottom: 10px;
-        right: 10px;
-        background-color: rgba(0, 0, 0, 0.7);
-        color: white;
-        padding: 5px 10px;
-        border-radius: 5px;
-        font-size: 12px;
-        z-index: 1000;
-        display: flex;
-        align-items: center;
-    }
-    .status-dot {
-        width: 8px;
-        height: 8px;
-        border-radius: 50%;
-        margin-right: 5px;
-    }
-    .connected { background-color: #4CAF50; }
-    .connecting { background-color: #FFC107; }
-    .disconnected { background-color: #F44336; }
-    </style>
 </head>
 <body>
     <div class="app-container">
         <!-- Left Sidebar -->
         <div class="sidebar">
-            <div class="user-profile">
-                <div class="profile-pic">
-                    <img src="/static/img/user-avatar.png" alt="User Avatar">
-                </div>
-                <div class="user-info">
-                    <h3 class="user-name">User</h3>
+            <div class="sidebar-header">
+                <div class="user-profile">
+                    <img src="/static/img/avatar.png" alt="User Avatar">
+                    <div>
+                        <h3 class="user-name">SparkyAI</h3>
+                    </div>
                 </div>
             </div>
             
+            <!-- Chat List -->
             <div class="chats-container">
                 <div class="chats-header">
-                                    <h3>Chats</h3>
-                    <button id="new-chat-btn" class="new-chat-btn">+ New Chat</button>
+                    <h3>Chats</h3>
+                    <button id="new-chat-btn" class="new-chat-button">+ New Chat</button>
                 </div>
                 <div id="chats-list" class="chats-list">
                     <!-- Chat items will be dynamically added here -->
@@ -63,72 +36,77 @@
         <!-- Main Content Area -->
         <div class="main-content">
             <!-- Chat Area -->
-            <div class="chat-area">
-                <div id="messages-container" class="messages-container">
+            <div id="chat-area" class="chat-area">
+                <div class="messages-container" id="messages-container">
                     <!-- Messages will be dynamically added here -->
                 </div>
                 
+                <!-- Input Container -->
                 <div class="input-container">
-                    <textarea id="message-input" placeholder="Type your message..."></textarea>
-                    <button id="send-button">Send</button>
+                    <div class="input-actions">
+                        <button id="file-upload-btn" class="file-upload-btn" title="Upload File">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                                <path d="M8 2a5.53 5.53 0 0 0-3.594 1.342c-.766.66-1.321 1.52-1.464 2.383C1.266 6.095 0 7.555 0 9.318 0 11.366 1.708 13 3.781 13h8.906C14.502 13 16 11.57 16 9.773c0-1.636-1.242-2.969-2.834-3.194C12.923 3.999 10.69 2 8 2zm2.354 5.146a.5.5 0 0 1-.708.708L8.5 6.707V10.5a.5.5 0 0 1-1 0V6.707L6.354 7.854a.5.5 0 1 1-.708-.708l2-2a.5.5 0 0 1 .708 0l2 2z"/>
+                            </svg>
+                        </button>
+                        <input type="file" id="file-upload-input" class="file-upload-input" hidden>
+                    </div>
+                    <textarea id="message-input" class="message-input" placeholder="Type your message..." rows="1"></textarea>
+                    <button id="send-button" class="send-button">Send</button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Right Panel -->
+        <div class="panel-area">
+            <div class="panel-tabs">
+                <button class="tab-button active" data-tab="thinking">Thinking</button>
+                <button class="tab-button" data-tab="code">Code</button>
+                <button class="tab-button" data-tab="preview">Preview</button>
+            </div>
+            
+            <div id="thinking-panel" class="panel-tab active">
+                <div class="panel-content">
+                    <div id="thinking-container" class="thinking-container">
+                        <!-- Thinking steps will be dynamically added here -->
+                    </div>
                 </div>
             </div>
             
-            <!-- Right Panel Area -->
-            <div class="panel-area">
-                <div class="panel-tabs">
-                    <button class="tab-button active" data-tab="thinking">Thinking</button>
-                    <button class="tab-button" data-tab="code">Code</button>
-                    <button class="tab-button" data-tab="preview">Preview</button>
-                </div>
-                
+            <div id="code-panel" class="panel-tab">
                 <div class="panel-content">
-                    <!-- Thinking Panel -->
-                    <div id="thinking-panel" class="panel-tab active">
-                        <div class="thinking-container">
-                            <!-- Thinking steps will be dynamically added here -->
-                        </div>
+                    <div class="code-toolbar">
+                        <button class="export-code-btn">Export</button>
+                        <button class="run-code-btn">Run</button>
                     </div>
-                    
-                    <!-- Code Panel -->
-                    <div id="code-panel" class="panel-tab">
-                        <div class="code-file-tabs">
-                            <!-- File tabs will be dynamically added here -->
-                        </div>
-                        <div class="code-content">
-                            <pre><code id="code-display"></code></pre>
-                        </div>
+                    <div class="code-file-tabs">
+                        <!-- File tabs will be dynamically added here -->
                     </div>
-                    
-                    <!-- Preview Panel -->
-                    <div id="preview-panel" class="panel-tab">
-                        <div class="preview-controls">
-                            <button id="refresh-preview">Refresh</button>
-                        </div>
-                        <div class="preview-container">
-                            <iframe id="preview-iframe" sandbox="allow-scripts allow-same-origin"></iframe>
-                        </div>
+                    <div class="code-content">
+                        <pre><code id="code-display"></code></pre>
+                    </div>
+                </div>
+            </div>
+            
+            <div id="preview-panel" class="panel-tab">
+                <div class="panel-content">
+                    <div class="preview-controls">
+                        <button id="refresh-preview">Refresh</button>
+                        <button id="download-preview">Download</button>
+                    </div>
+                    <div id="preview-container" class="preview-container">
+                        <!-- Preview content will be dynamically added here -->
                     </div>
                 </div>
             </div>
         </div>
+        
+        <!-- File Drop Area - Hidden by default, shown on drag -->
+        <div class="file-drop-area hidden">
+            <div class="file-drop-message">Drop file here to upload</div>
+        </div>
     </div>
     
-    <script src="/static/js/main.js"></script>
-    <script src="/static/js/websocket.js"></script>
-    <script src="/static/js/connectionMonitor.js"></script>
-    <script src="/static/js/chatManager.js"></script>
-    <script src="/static/js/thinkingManager.js"></script>
-    <script src="/static/js/fileManager.js"></script>
-    <script src="/static/js/browserManager.js"></script>
-    <script src="/static/js/codePreview.js"></script>
-    <script src="/static/js/chatFix.js"></script>
-    <div id="connection-status" class="connection-indicator">
-        <span class="status-dot connecting"></span> Connecting...
-    </div>
-
-    <!-- Debug and fix scripts -->
-    <script src="/static/js/websocket-debug.js"></script>
-    <script src="/static/js/chatFix.js"></script>
+    <script src="/static/js/app.js"></script>
 </body>
 </html>
