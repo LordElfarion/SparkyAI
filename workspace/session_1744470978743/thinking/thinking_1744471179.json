@@ -1,0 +1,41 @@
+{
+  "session_id": "session_1744470978743",
+  "start_time": 1744471179.896222,
+  "steps": [
+    {
+      "id": "4caab66b-b622-4cf0-8424-65a7c3ad69bd",
+      "type": "thinking",
+      "content": "Received message: {Hi}",
+      "data": {},
+      "timestamp": 1744471179.9110663
+    },
+    {
+      "id": "67037b46-a533-4dab-8aad-8a4574993ccc",
+      "type": "thinking",
+      "content": "Processing the message...",
+      "data": {},
+      "timestamp": 1744471179.911339
+    },
+    {
+      "id": "948c2cf6-eedf-4d57-96cf-b78491a8bff7",
+      "type": "action",
+      "content": "Generating response",
+      "data": {},
+      "timestamp": 1744471179.9115694
+    },
+    {
+      "id": "58c12d50-2b6a-4cff-a78c-9a7da773d06c",
+      "type": "result",
+      "content": "Response generated",
+      "data": {},
+      "timestamp": 1744471179.9122217
+    },
+    {
+      "id": "de13098b-7cd5-44ea-97f8-64ce84c8df85",
+      "type": "conclusion",
+      "content": "Completed processing the message",
+      "data": {},
+      "timestamp": 1744471179.9125612
+    }
+  ]
+}

@@ -1,0 +1,368 @@
+2025-04-12 16:57:44,905 - websocket - INFO - New connection in session ba23eb1d-568e-490d-815f-3b48e8ecea31
+2025-04-12 16:57:49,556 - websocket - INFO - Connection closed in session ba23eb1d-568e-490d-815f-3b48e8ecea31
+2025-04-12 16:57:49,558 - websocket - INFO - New connection in session 91ce3fac-82cc-4c41-875f-93afb6a9def2
+2025-04-12 16:57:50,722 - websocket - INFO - Connection closed in session 91ce3fac-82cc-4c41-875f-93afb6a9def2
+2025-04-12 16:57:50,725 - websocket - INFO - New connection in session dc1e3ed2-ca83-4f1b-85de-f707dc809889
+2025-04-12 16:57:51,572 - websocket - INFO - New connection in session ba23eb1d-568e-490d-815f-3b48e8ecea31
+2025-04-12 16:57:52,738 - websocket - INFO - New connection in session 91ce3fac-82cc-4c41-875f-93afb6a9def2
+2025-04-12 17:02:50,095 - websocket - INFO - Connection closed in session ba23eb1d-568e-490d-815f-3b48e8ecea31
+2025-04-12 17:02:50,096 - websocket - INFO - Connection closed in session dc1e3ed2-ca83-4f1b-85de-f707dc809889
+2025-04-12 17:02:50,096 - websocket - INFO - Connection closed in session 91ce3fac-82cc-4c41-875f-93afb6a9def2
+2025-04-12 17:02:52,100 - websocket - INFO - New connection in session ba23eb1d-568e-490d-815f-3b48e8ecea31
+2025-04-12 17:02:52,115 - websocket - INFO - New connection in session 91ce3fac-82cc-4c41-875f-93afb6a9def2
+2025-04-12 17:02:52,131 - websocket - INFO - New connection in session dc1e3ed2-ca83-4f1b-85de-f707dc809889
+2025-04-12 17:02:52,642 - websocket - INFO - Connection closed in session ba23eb1d-568e-490d-815f-3b48e8ecea31
+2025-04-12 17:02:52,643 - websocket - INFO - Connection closed in session 91ce3fac-82cc-4c41-875f-93afb6a9def2
+2025-04-12 17:02:52,643 - websocket - INFO - Connection closed in session dc1e3ed2-ca83-4f1b-85de-f707dc809889
+2025-04-12 17:02:52,747 - websocket - INFO - New connection in session dc1e3ed2-ca83-4f1b-85de-f707dc809889
+2025-04-12 17:03:32,550 - websocket - INFO - New connection in session dc1e3ed2-ca83-4f1b-85de-f707dc809889
+2025-04-12 17:03:37,439 - websocket - INFO - Connection closed in session dc1e3ed2-ca83-4f1b-85de-f707dc809889
+2025-04-12 17:03:37,441 - websocket - INFO - New connection in session c36d5317-dfc2-4659-8acc-d0495d6b1abe
+2025-04-12 17:03:39,444 - websocket - INFO - New connection in session dc1e3ed2-ca83-4f1b-85de-f707dc809889
+2025-04-12 17:03:41,445 - agent.thinking - INFO - Initialized thinking process for session c36d5317-dfc2-4659-8acc-d0495d6b1abe
+2025-04-12 17:03:41,446 - agent.thinking - INFO - Added thinking step: Received message: Hello!...
+2025-04-12 17:03:41,446 - agent.thinking - INFO - Added thinking step: Processing the message......
+2025-04-12 17:03:41,446 - agent.thinking - INFO - Added action step: Generating response...
+2025-04-12 17:03:41,447 - agent.thinking - INFO - Added result step: Response generated...
+2025-04-12 17:03:41,448 - agent.thinking - INFO - Added conclusion step: Completed processing the message...
+2025-04-12 17:03:41,448 - agent.thinking - INFO - Saved thinking process to workspace\c36d5317-dfc2-4659-8acc-d0495d6b1abe\thinking\thinking_1744466621.json
+2025-04-12 17:03:41,448 - agent.thinking - INFO - Completed thinking process for session c36d5317-dfc2-4659-8acc-d0495d6b1abe
+2025-04-12 17:04:21,807 - websocket - INFO - Connection closed in session c36d5317-dfc2-4659-8acc-d0495d6b1abe
+2025-04-12 17:04:21,807 - websocket - INFO - Connection closed in session dc1e3ed2-ca83-4f1b-85de-f707dc809889
+2025-04-12 17:11:21,694 - websocket - INFO - New connection in session c36d5317-dfc2-4659-8acc-d0495d6b1abe
+2025-04-12 17:13:10,949 - websocket - INFO - Connection closed in session c36d5317-dfc2-4659-8acc-d0495d6b1abe
+2025-04-12 17:13:11,008 - websocket - INFO - New connection in session c36d5317-dfc2-4659-8acc-d0495d6b1abe
+2025-04-12 17:13:25,860 - websocket - INFO - Connection closed in session c36d5317-dfc2-4659-8acc-d0495d6b1abe
+2025-04-12 17:13:25,863 - websocket - INFO - New connection in session 23b15d80-dc8a-4baa-9ea2-62fd902bdeea
+2025-04-12 17:13:27,877 - websocket - INFO - New connection in session c36d5317-dfc2-4659-8acc-d0495d6b1abe
+2025-04-12 17:13:42,736 - agent.thinking - INFO - Initialized thinking process for session 23b15d80-dc8a-4baa-9ea2-62fd902bdeea
+2025-04-12 17:13:42,737 - agent.thinking - INFO - Added thinking step: Received message: I want to code a basic math calc...
+2025-04-12 17:13:42,737 - agent.thinking - INFO - Added thinking step: Processing the message......
+2025-04-12 17:13:42,737 - agent.thinking - INFO - Added action step: Generating response...
+2025-04-12 17:13:42,738 - agent.thinking - INFO - Added result step: Response generated...
+2025-04-12 17:13:42,738 - agent.thinking - INFO - Added conclusion step: Completed processing the message...
+2025-04-12 17:13:42,739 - agent.thinking - INFO - Saved thinking process to workspace\23b15d80-dc8a-4baa-9ea2-62fd902bdeea\thinking\thinking_1744467222.json
+2025-04-12 17:13:42,739 - agent.thinking - INFO - Completed thinking process for session 23b15d80-dc8a-4baa-9ea2-62fd902bdeea
+2025-04-12 17:14:28,445 - websocket - INFO - Connection closed in session c36d5317-dfc2-4659-8acc-d0495d6b1abe
+2025-04-12 17:14:28,446 - websocket - INFO - Connection closed in session 23b15d80-dc8a-4baa-9ea2-62fd902bdeea
+2025-04-12 17:15:42,427 - websocket - INFO - New connection in session 23b15d80-dc8a-4baa-9ea2-62fd902bdeea
+2025-04-12 17:17:43,263 - websocket - INFO - Connection closed in session 23b15d80-dc8a-4baa-9ea2-62fd902bdeea
+2025-04-12 17:17:43,265 - websocket - INFO - New connection in session 3036e2ec-0267-4d15-94b9-1ff59c97730d
+2025-04-12 17:17:45,268 - websocket - INFO - New connection in session 23b15d80-dc8a-4baa-9ea2-62fd902bdeea
+2025-04-12 17:20:59,965 - websocket - INFO - Connection closed in session 23b15d80-dc8a-4baa-9ea2-62fd902bdeea
+2025-04-12 17:20:59,965 - websocket - INFO - Connection closed in session 3036e2ec-0267-4d15-94b9-1ff59c97730d
+2025-04-12 17:22:10,701 - websocket - INFO - New connection in session 3036e2ec-0267-4d15-94b9-1ff59c97730d
+2025-04-12 17:22:12,323 - websocket - INFO - Connection closed in session 3036e2ec-0267-4d15-94b9-1ff59c97730d
+2025-04-12 17:22:12,327 - websocket - INFO - New connection in session 23b15d80-dc8a-4baa-9ea2-62fd902bdeea
+2025-04-12 17:22:14,326 - websocket - INFO - New connection in session 3036e2ec-0267-4d15-94b9-1ff59c97730d
+2025-04-12 17:22:21,099 - websocket - INFO - Connection closed in session 23b15d80-dc8a-4baa-9ea2-62fd902bdeea
+2025-04-12 17:22:21,102 - websocket - INFO - New connection in session 5843eaca-3b4e-43cc-88c0-7254ea3f82b2
+2025-04-12 17:22:23,101 - websocket - INFO - New connection in session 23b15d80-dc8a-4baa-9ea2-62fd902bdeea
+2025-04-12 17:22:24,959 - websocket - INFO - Connection closed in session 5843eaca-3b4e-43cc-88c0-7254ea3f82b2
+2025-04-12 17:22:24,962 - websocket - INFO - New connection in session 3d982d34-d5ff-4090-9232-a75b980ef451
+2025-04-12 17:22:26,172 - websocket - INFO - Connection closed in session 3d982d34-d5ff-4090-9232-a75b980ef451
+2025-04-12 17:22:26,175 - websocket - INFO - New connection in session 3342192e-657a-479f-bf81-5959f0c0b63f
+2025-04-12 17:22:26,972 - websocket - INFO - New connection in session 5843eaca-3b4e-43cc-88c0-7254ea3f82b2
+2025-04-12 17:22:28,624 - websocket - INFO - New connection in session 3d982d34-d5ff-4090-9232-a75b980ef451
+2025-04-12 17:22:39,071 - agent.thinking - INFO - Initialized thinking process for session 3342192e-657a-479f-bf81-5959f0c0b63f
+2025-04-12 17:22:39,072 - agent.thinking - INFO - Added thinking step: Received message: Hello, are you there?...
+2025-04-12 17:22:39,072 - agent.thinking - INFO - Added thinking step: Processing the message......
+2025-04-12 17:22:39,072 - agent.thinking - INFO - Added action step: Generating response...
+2025-04-12 17:22:39,073 - agent.thinking - INFO - Added result step: Response generated...
+2025-04-12 17:22:39,073 - agent.thinking - INFO - Added conclusion step: Completed processing the message...
+2025-04-12 17:22:39,074 - agent.thinking - INFO - Saved thinking process to workspace\3342192e-657a-479f-bf81-5959f0c0b63f\thinking\thinking_1744467759.json
+2025-04-12 17:22:39,074 - agent.thinking - INFO - Completed thinking process for session 3342192e-657a-479f-bf81-5959f0c0b63f
+2025-04-12 17:24:27,415 - websocket - INFO - Connection closed in session 3036e2ec-0267-4d15-94b9-1ff59c97730d
+2025-04-12 17:24:27,416 - websocket - INFO - Connection closed in session 23b15d80-dc8a-4baa-9ea2-62fd902bdeea
+2025-04-12 17:24:27,417 - websocket - INFO - Connection closed in session 3342192e-657a-479f-bf81-5959f0c0b63f
+2025-04-12 17:24:27,417 - websocket - INFO - Connection closed in session 3d982d34-d5ff-4090-9232-a75b980ef451
+2025-04-12 17:24:27,417 - websocket - INFO - Connection closed in session 5843eaca-3b4e-43cc-88c0-7254ea3f82b2
+2025-04-12 17:24:27,526 - websocket - INFO - New connection in session 3342192e-657a-479f-bf81-5959f0c0b63f
+2025-04-12 17:25:07,182 - agent.thinking - INFO - Initialized thinking process for session 3342192e-657a-479f-bf81-5959f0c0b63f
+2025-04-12 17:25:07,189 - agent.thinking - INFO - Added thinking step: Received message: search for the weather in romani...
+2025-04-12 17:25:07,190 - agent.thinking - INFO - Added thinking step: Processing the message......
+2025-04-12 17:25:07,190 - agent.thinking - INFO - Added action step: Generating response...
+2025-04-12 17:25:07,191 - agent.thinking - INFO - Added result step: Response generated...
+2025-04-12 17:25:07,191 - agent.thinking - INFO - Added conclusion step: Completed processing the message...
+2025-04-12 17:25:07,192 - agent.thinking - INFO - Saved thinking process to workspace\3342192e-657a-479f-bf81-5959f0c0b63f\thinking\thinking_1744467907.json
+2025-04-12 17:25:07,192 - agent.thinking - INFO - Completed thinking process for session 3342192e-657a-479f-bf81-5959f0c0b63f
+2025-04-12 17:25:19,068 - agent.thinking - INFO - Initialized thinking process for session 3342192e-657a-479f-bf81-5959f0c0b63f
+2025-04-12 17:25:19,077 - agent.thinking - INFO - Added thinking step: Received message: to tell me what the weather is...
+2025-04-12 17:25:19,078 - agent.thinking - INFO - Added thinking step: Processing the message......
+2025-04-12 17:25:19,078 - agent.thinking - INFO - Added action step: Generating response...
+2025-04-12 17:25:19,079 - agent.thinking - INFO - Added result step: Response generated...
+2025-04-12 17:25:19,079 - agent.thinking - INFO - Added conclusion step: Completed processing the message...
+2025-04-12 17:25:19,080 - agent.thinking - INFO - Saved thinking process to workspace\3342192e-657a-479f-bf81-5959f0c0b63f\thinking\thinking_1744467919.json
+2025-04-12 17:25:19,080 - agent.thinking - INFO - Completed thinking process for session 3342192e-657a-479f-bf81-5959f0c0b63f
+2025-04-12 17:25:32,230 - websocket - INFO - Connection closed in session 3342192e-657a-479f-bf81-5959f0c0b63f
+2025-04-12 17:59:31,000 - root - INFO - Application started
+2025-04-12 17:59:31,001 - root - INFO - Using Ollama API URL: http://localhost:11434/api/generate
+2025-04-12 17:59:31,001 - root - INFO - Using model: llama3
+2025-04-12 18:04:38,130 - root - INFO - Application started
+2025-04-12 18:04:38,130 - root - INFO - Using Ollama API URL: http://localhost:11434/api/generate
+2025-04-12 18:04:38,131 - root - INFO - Using model: llama3
+2025-04-12 18:11:18,867 - root - INFO - Application started
+2025-04-12 18:11:18,867 - root - INFO - Using Ollama API URL: http://localhost:11434/api/generate
+2025-04-12 18:11:18,867 - root - INFO - Using model: llama3
+2025-04-12 18:12:03,189 - root - INFO - Application started
+2025-04-12 18:12:03,189 - root - INFO - Using Ollama API URL: http://localhost:11434/api/generate
+2025-04-12 18:12:03,189 - root - INFO - Using model: llama3
+2025-04-12 18:12:16,905 - root - INFO - Application started
+2025-04-12 18:12:16,906 - root - INFO - Using Ollama API URL: http://localhost:11434/api/generate
+2025-04-12 18:12:16,906 - root - INFO - Using model: llama3
+2025-04-12 18:13:42,967 - root - INFO - Application started
+2025-04-12 18:13:42,967 - root - INFO - Using Ollama API URL: http://localhost:11434/api/generate
+2025-04-12 18:13:42,967 - root - INFO - Using model: llama3
+2025-04-12 18:16:02,929 - root - INFO - Application started
+2025-04-12 18:16:02,930 - root - INFO - Using Ollama API URL: http://localhost:11434/api/generate
+2025-04-12 18:16:02,930 - root - INFO - Using model: llama3
+2025-04-12 18:16:19,055 - websocket - INFO - New connection in session session_1744470978743
+2025-04-12 18:16:19,058 - websocket - INFO - Received message: {'type': 'ping', 'timestamp': '2025-04-12T15:16:19.057Z'}
+2025-04-12 18:16:21,745 - websocket - INFO - Received message: {'type': 'ping', 'timestamp': '2025-04-12T15:16:21.745Z'}
+2025-04-12 18:16:33,632 - websocket - INFO - Received message: {'type': 'chat', 'content': 'hello', 'id': 'msg_1744470993632', 'timestamp': '2025-04-12T15:16:33.632Z'}
+2025-04-12 18:16:33,633 - websocket - ERROR - Error processing message: Agent.__init__() missing 1 required positional argument: 'websocket_manager'
+2025-04-12 18:16:48,819 - websocket - INFO - Received message: {'type': 'ping', 'timestamp': '2025-04-12T15:16:48.818Z'}
+2025-04-12 18:17:18,822 - websocket - INFO - Received message: {'type': 'ping', 'timestamp': '2025-04-12T15:17:18.821Z'}
+2025-04-12 18:17:48,822 - websocket - INFO - Received message: {'type': 'ping', 'timestamp': '2025-04-12T15:17:48.820Z'}
+2025-04-12 18:18:18,827 - websocket - INFO - Received message: {'type': 'ping', 'timestamp': '2025-04-12T15:18:18.827Z'}
+2025-04-12 18:19:01,125 - websocket - INFO - Connection closed in session session_1744470978743
+2025-04-12 18:19:01,895 - root - INFO - Application started
+2025-04-12 18:19:01,895 - root - INFO - Using Ollama API URL: http://localhost:11434/api/generate
+2025-04-12 18:19:01,895 - root - INFO - Using model: llama3
+2025-04-12 18:19:04,141 - websocket - INFO - New connection in session session_1744470978743
+2025-04-12 18:19:04,142 - websocket - INFO - Received message: {'type': 'ping', 'timestamp': '2025-04-12T15:19:04.142Z'}
+2025-04-12 18:19:11,211 - websocket - INFO - Connection closed in session session_1744470978743
+2025-04-12 18:19:11,964 - root - INFO - Application started
+2025-04-12 18:19:11,964 - root - INFO - Using Ollama API URL: http://localhost:11434/api/generate
+2025-04-12 18:19:11,965 - root - INFO - Using model: llama3
+2025-04-12 18:19:14,143 - websocket - INFO - New connection in session session_1744470978743
+2025-04-12 18:19:14,145 - websocket - INFO - Received message: {'type': 'ping', 'timestamp': '2025-04-12T15:19:14.145Z'}
+2025-04-12 18:19:15,836 - websocket - INFO - Received message: {'type': 'ping', 'timestamp': '2025-04-12T15:19:15.835Z'}
+2025-04-12 18:19:22,365 - root - INFO - Application started
+2025-04-12 18:19:22,366 - root - INFO - Using Ollama API URL: http://localhost:11434/api/generate
+2025-04-12 18:19:22,366 - root - INFO - Using model: llama3
+2025-04-12 18:19:24,136 - websocket - INFO - New connection in session session_1744470978743
+2025-04-12 18:19:24,140 - websocket - INFO - Received message: {'type': 'ping', 'timestamp': '2025-04-12T15:19:24.140Z'}
+2025-04-12 18:19:27,309 - websocket - INFO - Received message: {'type': 'ping', 'timestamp': '2025-04-12T15:19:27.309Z'}
+2025-04-12 18:19:28,842 - websocket - INFO - Connection closed in session session_1744470978743
+2025-04-12 18:19:29,251 - websocket - INFO - New connection in session session_1744470978743
+2025-04-12 18:19:29,254 - websocket - INFO - Received message: {'type': 'ping', 'timestamp': '2025-04-12T15:19:29.253Z'}
+2025-04-12 18:19:31,948 - websocket - INFO - Received message: {'type': 'ping', 'timestamp': '2025-04-12T15:19:31.947Z'}
+2025-04-12 18:19:39,895 - websocket - INFO - Received message: {'type': 'chat', 'content': 'Hi', 'id': 'msg_1744471179895', 'timestamp': '2025-04-12T15:19:39.895Z'}
+2025-04-12 18:19:39,896 - agent.thinking - INFO - Initialized thinking process for session session_1744470978743
+2025-04-12 18:19:39,910 - agent.base - ERROR - Error initializing LLM: unterminated f-string literal (detected at line 102) (llm.py, line 102)
+2025-04-12 18:19:39,910 - agent.base - INFO - Processing user message: Hi
+2025-04-12 18:19:39,911 - agent.thinking - INFO - Added thinking step: Received message: {Hi}...
+2025-04-12 18:19:39,911 - agent.thinking - INFO - Added thinking step: Processing the message......
+2025-04-12 18:19:39,911 - agent.thinking - INFO - Added action step: Generating response...
+2025-04-12 18:19:39,912 - agent.thinking - INFO - Added result step: Response generated...
+2025-04-12 18:19:39,912 - agent.thinking - INFO - Added conclusion step: Completed processing the message...
+2025-04-12 18:19:39,913 - agent.thinking - INFO - Saved thinking process to workspace\session_1744470978743\thinking\thinking_1744471179.json
+2025-04-12 18:19:39,913 - agent.thinking - INFO - Completed thinking process for session session_1744470978743
+2025-04-12 18:19:59,824 - websocket - INFO - Received message: {'type': 'ping', 'timestamp': '2025-04-12T15:19:59.823Z'}
+2025-04-12 18:20:29,823 - websocket - INFO - Received message: {'type': 'ping', 'timestamp': '2025-04-12T15:20:29.823Z'}
+2025-04-12 18:20:59,830 - websocket - INFO - Received message: {'type': 'ping', 'timestamp': '2025-04-12T15:20:59.829Z'}
+2025-04-12 18:24:52,921 - root - INFO - Application started
+2025-04-12 18:24:52,921 - root - INFO - Using Ollama API URL: http://localhost:11434/api/generate
+2025-04-12 18:24:52,922 - root - INFO - Using model: llama3
+2025-04-12 18:24:55,814 - websocket - INFO - New connection in session session_1744470978743
+2025-04-12 18:24:55,816 - websocket - INFO - Received message: {'type': 'ping', 'timestamp': '2025-04-12T15:24:55.816Z'}
+2025-04-12 18:24:56,602 - websocket - INFO - Connection closed in session session_1744470978743
+2025-04-12 18:24:56,986 - websocket - INFO - New connection in session session_1744470978743
+2025-04-12 18:24:56,993 - websocket - INFO - Received message: {'type': 'ping', 'timestamp': '2025-04-12T15:24:56.992Z'}
+2025-04-12 18:24:59,684 - websocket - INFO - Received message: {'type': 'ping', 'timestamp': '2025-04-12T15:24:59.683Z'}
+2025-04-12 18:25:02,791 - websocket - INFO - Received message: {'type': 'chat', 'content': 'hello AI', 'id': 'msg_1744471502790', 'timestamp': '2025-04-12T15:25:02.790Z'}
+2025-04-12 18:25:02,791 - agent.thinking - INFO - Initialized thinking process for session session_1744470978743
+2025-04-12 18:25:02,804 - agent.llm - INFO - Initializing LLM with API URL: http://localhost:11434/api/generate and model: llama3
+2025-04-12 18:25:02,804 - agent.base - INFO - LLM initialized for session session_1744470978743
+2025-04-12 18:25:02,810 - agent.base - INFO - Processing user message: hello AI
+2025-04-12 18:25:02,810 - agent.thinking - INFO - Added thinking step: Received message: {hello AI}...
+2025-04-12 18:25:02,811 - agent.thinking - INFO - Added thinking step: Processing the message......
+2025-04-12 18:25:02,811 - agent.base - INFO - Generating response (attempt 1/3)
+2025-04-12 18:25:20,822 - agent.thinking - INFO - Added action step: Generating response...
+2025-04-12 18:25:20,823 - agent.thinking - INFO - Added result step: Response generated...
+2025-04-12 18:25:20,823 - agent.thinking - INFO - Added conclusion step: Completed processing the message...
+2025-04-12 18:25:20,824 - agent.thinking - INFO - Saved thinking process to workspace\session_1744470978743\thinking\thinking_1744471502.json
+2025-04-12 18:25:20,824 - agent.thinking - INFO - Completed thinking process for session session_1744470978743
+2025-04-12 18:25:26,682 - websocket - INFO - Received message: {'type': 'ping', 'timestamp': '2025-04-12T15:25:26.682Z'}
+2025-04-12 18:25:39,946 - agent.llm - INFO - Initializing LLM with API URL: http://localhost:11434/api/generate and model: llama3
+2025-04-12 18:25:40,974 - asyncio - ERROR - Unclosed client session
+client_session: <aiohttp.client.ClientSession object at 0x000001F274706D50>
+2025-04-12 18:25:40,974 - asyncio - ERROR - Unclosed connector
+connections: ['deque([(<aiohttp.client_proto.ResponseHandler object at 0x000001F274757A10>, 50965.1566915)])']
+connector: <aiohttp.connector.TCPConnector object at 0x000001F274706C10>
+2025-04-12 18:25:54,863 - websocket - INFO - Received message: {'type': 'chat', 'content': 'Yes, can you code a simple HTML5 website?', 'id': 'msg_1744471554863', 'timestamp': '2025-04-12T15:25:54.863Z'}
+2025-04-12 18:25:54,864 - agent.thinking - INFO - Initialized thinking process for session session_1744470978743
+2025-04-12 18:25:54,865 - agent.llm - INFO - Initializing LLM with API URL: http://localhost:11434/api/generate and model: llama3
+2025-04-12 18:25:54,865 - agent.base - INFO - LLM initialized for session session_1744470978743
+2025-04-12 18:25:54,872 - asyncio - ERROR - Unclosed client session
+client_session: <aiohttp.client.ClientSession object at 0x000001F274720590>
+2025-04-12 18:25:54,872 - agent.base - INFO - Processing user message: Yes, can you code a simple HTML5 website?
+2025-04-12 18:25:54,873 - agent.thinking - INFO - Added thinking step: Received message: {Yes, can you code a simple HTML...
+2025-04-12 18:25:54,873 - agent.thinking - INFO - Added thinking step: Processing the message......
+2025-04-12 18:25:54,873 - agent.base - INFO - Generating response (attempt 1/3)
+2025-04-12 18:26:04,281 - agent.thinking - INFO - Added action step: Generating response...
+2025-04-12 18:26:04,282 - agent.thinking - INFO - Added result step: Response generated...
+2025-04-12 18:26:04,282 - agent.thinking - INFO - Added conclusion step: Completed processing the message...
+2025-04-12 18:26:04,283 - agent.thinking - INFO - Saved thinking process to workspace\session_1744470978743\thinking\thinking_1744471554.json
+2025-04-12 18:26:04,283 - agent.thinking - INFO - Completed thinking process for session session_1744470978743
+2025-04-12 18:26:04,283 - websocket - INFO - Received message: {'type': 'ping', 'timestamp': '2025-04-12T15:25:56.680Z'}
+2025-04-12 18:26:26,828 - websocket - INFO - Received message: {'type': 'ping', 'timestamp': '2025-04-12T15:26:26.826Z'}
+2025-04-12 18:26:56,820 - websocket - INFO - Received message: {'type': 'ping', 'timestamp': '2025-04-12T15:26:56.819Z'}
+2025-04-12 18:27:26,682 - websocket - INFO - Received message: {'type': 'ping', 'timestamp': '2025-04-12T15:27:26.681Z'}
+2025-04-12 18:27:56,831 - websocket - INFO - Received message: {'type': 'ping', 'timestamp': '2025-04-12T15:27:56.831Z'}
+2025-04-12 18:28:26,823 - websocket - INFO - Received message: {'type': 'ping', 'timestamp': '2025-04-12T15:28:26.822Z'}
+2025-04-12 18:29:15,828 - websocket - INFO - Received message: {'type': 'ping', 'timestamp': '2025-04-12T15:29:15.827Z'}
+2025-04-12 18:30:15,837 - websocket - INFO - Received message: {'type': 'ping', 'timestamp': '2025-04-12T15:30:15.835Z'}
+2025-04-12 18:31:15,826 - websocket - INFO - Received message: {'type': 'ping', 'timestamp': '2025-04-12T15:31:15.824Z'}
+2025-04-12 18:32:15,823 - websocket - INFO - Received message: {'type': 'ping', 'timestamp': '2025-04-12T15:32:15.823Z'}
+2025-04-12 18:33:15,831 - websocket - INFO - Received message: {'type': 'ping', 'timestamp': '2025-04-12T15:33:15.831Z'}
+2025-04-12 18:34:15,825 - websocket - INFO - Received message: {'type': 'ping', 'timestamp': '2025-04-12T15:34:15.825Z'}
+2025-04-12 18:35:15,821 - websocket - INFO - Received message: {'type': 'ping', 'timestamp': '2025-04-12T15:35:15.820Z'}
+2025-04-12 18:36:15,826 - websocket - INFO - Received message: {'type': 'ping', 'timestamp': '2025-04-12T15:36:15.826Z'}
+2025-04-12 18:37:15,824 - websocket - INFO - Received message: {'type': 'ping', 'timestamp': '2025-04-12T15:37:15.824Z'}
+2025-04-12 18:38:15,820 - websocket - INFO - Received message: {'type': 'ping', 'timestamp': '2025-04-12T15:38:15.819Z'}
+2025-04-12 18:39:15,833 - websocket - INFO - Received message: {'type': 'ping', 'timestamp': '2025-04-12T15:39:15.831Z'}
+2025-04-12 18:40:15,824 - websocket - INFO - Received message: {'type': 'ping', 'timestamp': '2025-04-12T15:40:15.824Z'}
+2025-04-12 18:40:18,743 - websocket - INFO - Connection closed in session session_1744470978743
+2025-04-12 18:40:18,744 - asyncio - ERROR - Unclosed client session
+client_session: <aiohttp.client.ClientSession object at 0x000001F274706E90>
+2025-04-12 18:40:19,685 - root - INFO - Application started
+2025-04-12 18:40:19,685 - root - INFO - Using Ollama API URL: http://localhost:11434/api/generate
+2025-04-12 18:40:19,685 - root - INFO - Using model: llama3
+2025-04-12 18:40:21,138 - websocket - INFO - New connection in session session_1744470978743
+2025-04-12 18:40:21,140 - websocket - INFO - Received message: {'type': 'ping', 'timestamp': '2025-04-12T15:40:21.140Z'}
+2025-04-12 18:41:15,832 - websocket - INFO - Received message: {'type': 'ping', 'timestamp': '2025-04-12T15:41:15.831Z'}
+2025-04-12 18:41:29,809 - websocket - INFO - Connection closed in session session_1744470978743
+2025-04-12 18:41:30,721 - root - INFO - Application started
+2025-04-12 18:41:30,721 - root - INFO - Using Ollama API URL: http://localhost:11434/api/generate
+2025-04-12 18:41:30,721 - root - INFO - Using model: llama3
+2025-04-12 18:41:32,139 - websocket - INFO - New connection in session session_1744470978743
+2025-04-12 18:41:32,140 - websocket - INFO - Received message: {'type': 'ping', 'timestamp': '2025-04-12T15:41:32.140Z'}
+2025-04-12 18:41:38,529 - websocket - INFO - Connection closed in session session_1744470978743
+2025-04-12 18:41:39,401 - root - INFO - Application started
+2025-04-12 18:41:39,401 - root - INFO - Using Ollama API URL: http://localhost:11434/api/generate
+2025-04-12 18:41:39,401 - root - INFO - Using model: llama3
+2025-04-12 18:41:41,143 - websocket - INFO - New connection in session session_1744470978743
+2025-04-12 18:41:41,145 - websocket - INFO - Received message: {'type': 'ping', 'timestamp': '2025-04-12T15:41:41.145Z'}
+2025-04-12 18:42:15,823 - websocket - INFO - Received message: {'type': 'ping', 'timestamp': '2025-04-12T15:42:15.823Z'}
+2025-04-12 18:42:16,427 - websocket - INFO - Connection closed in session session_1744470978743
+2025-04-12 18:42:17,296 - root - INFO - Application started
+2025-04-12 18:42:17,296 - root - INFO - Using Ollama API URL: http://localhost:11434/api/generate
+2025-04-12 18:42:17,296 - root - INFO - Using model: llama3
+2025-04-12 18:42:19,155 - websocket - INFO - New connection in session session_1744470978743
+2025-04-12 18:42:19,159 - websocket - INFO - Received message: {'type': 'ping', 'timestamp': '2025-04-12T15:42:19.158Z'}
+2025-04-12 18:42:55,367 - websocket - INFO - Connection closed in session session_1744470978743
+2025-04-12 18:42:56,253 - root - INFO - Application started
+2025-04-12 18:42:56,254 - root - INFO - Using Ollama API URL: http://localhost:11434/api/generate
+2025-04-12 18:42:56,254 - root - INFO - Using model: llama3
+2025-04-12 18:42:57,790 - root - INFO - Application started
+2025-04-12 18:42:57,790 - root - INFO - Using Ollama API URL: http://localhost:11434/api/generate
+2025-04-12 18:42:57,791 - root - INFO - Using model: llama3
+2025-04-12 18:42:58,138 - websocket - INFO - New connection in session session_1744470978743
+2025-04-12 18:42:58,141 - websocket - INFO - Received message: {'type': 'ping', 'timestamp': '2025-04-12T15:42:58.140Z'}
+2025-04-12 18:43:10,771 - websocket - INFO - Connection closed in session session_1744470978743
+2025-04-12 18:43:11,652 - root - INFO - Application started
+2025-04-12 18:43:11,652 - root - INFO - Using Ollama API URL: http://localhost:11434/api/generate
+2025-04-12 18:43:11,652 - root - INFO - Using model: llama3
+2025-04-12 18:43:13,143 - websocket - INFO - New connection in session session_1744470978743
+2025-04-12 18:43:13,145 - websocket - INFO - Received message: {'type': 'ping', 'timestamp': '2025-04-12T15:43:13.145Z'}
+2025-04-12 18:43:15,836 - websocket - INFO - Received message: {'type': 'ping', 'timestamp': '2025-04-12T15:43:15.836Z'}
+2025-04-12 18:44:15,833 - websocket - INFO - Received message: {'type': 'ping', 'timestamp': '2025-04-12T15:44:15.832Z'}
+2025-04-12 18:45:15,829 - websocket - INFO - Received message: {'type': 'ping', 'timestamp': '2025-04-12T15:45:15.828Z'}
+2025-04-12 18:46:15,822 - websocket - INFO - Received message: {'type': 'ping', 'timestamp': '2025-04-12T15:46:15.822Z'}
+2025-04-12 18:46:37,554 - websocket - INFO - Connection closed in session session_1744470978743
+2025-04-12 18:46:38,425 - root - INFO - Application started
+2025-04-12 18:46:38,425 - root - INFO - Using Ollama API URL: http://localhost:11434/api/generate
+2025-04-12 18:46:38,425 - root - INFO - Using model: llama3
+2025-04-12 18:46:40,139 - websocket - INFO - New connection in session session_1744470978743
+2025-04-12 18:46:40,140 - websocket - INFO - Received message: {'type': 'ping', 'timestamp': '2025-04-12T15:46:40.140Z'}
+2025-04-12 18:47:15,828 - websocket - INFO - Received message: {'type': 'ping', 'timestamp': '2025-04-12T15:47:15.828Z'}
+2025-04-12 18:48:15,829 - websocket - INFO - Received message: {'type': 'ping', 'timestamp': '2025-04-12T15:48:15.828Z'}
+2025-04-12 18:48:20,344 - websocket - INFO - Connection closed in session session_1744470978743
+2025-04-12 18:48:21,233 - root - INFO - Application started
+2025-04-12 18:48:21,234 - root - INFO - Using Ollama API URL: http://localhost:11434/api/generate
+2025-04-12 18:48:21,234 - root - INFO - Using model: llama3
+2025-04-12 18:48:22,526 - root - INFO - Application started
+2025-04-12 18:48:22,526 - root - INFO - Using Ollama API URL: http://localhost:11434/api/generate
+2025-04-12 18:48:22,526 - root - INFO - Using model: llama3
+2025-04-12 18:48:23,134 - websocket - INFO - New connection in session session_1744470978743
+2025-04-12 18:48:23,135 - websocket - INFO - Received message: {'type': 'ping', 'timestamp': '2025-04-12T15:48:23.135Z'}
+2025-04-12 18:48:39,924 - websocket - INFO - Connection closed in session session_1744470978743
+2025-04-12 18:48:40,788 - root - INFO - Application started
+2025-04-12 18:48:40,789 - root - INFO - Using Ollama API URL: http://localhost:11434/api/generate
+2025-04-12 18:48:40,789 - root - INFO - Using model: llama3
+2025-04-12 18:48:43,139 - websocket - INFO - New connection in session session_1744470978743
+2025-04-12 18:48:43,144 - websocket - INFO - Received message: {'type': 'ping', 'timestamp': '2025-04-12T15:48:43.144Z'}
+2025-04-12 18:49:15,820 - websocket - INFO - Received message: {'type': 'ping', 'timestamp': '2025-04-12T15:49:15.820Z'}
+2025-04-12 18:49:40,607 - websocket - INFO - Connection closed in session session_1744470978743
+2025-04-12 18:49:41,471 - root - INFO - Application started
+2025-04-12 18:49:41,471 - root - INFO - Using Ollama API URL: http://localhost:11434/api/generate
+2025-04-12 18:49:41,471 - root - INFO - Using model: llama3
+2025-04-12 18:49:43,301 - root - INFO - Application started
+2025-04-12 18:49:43,301 - root - INFO - Using Ollama API URL: http://localhost:11434/api/generate
+2025-04-12 18:49:43,301 - root - INFO - Using model: llama3
+2025-04-12 18:49:43,303 - websocket - INFO - New connection in session session_1744470978743
+2025-04-12 18:49:43,304 - websocket - INFO - Received message: {'type': 'ping', 'timestamp': '2025-04-12T15:49:43.304Z'}
+2025-04-12 18:50:15,824 - websocket - INFO - Received message: {'type': 'ping', 'timestamp': '2025-04-12T15:50:15.823Z'}
+2025-04-12 18:50:26,265 - websocket - INFO - Connection closed in session session_1744470978743
+2025-04-12 18:50:26,685 - websocket - INFO - New connection in session session_1744470978743
+2025-04-12 18:50:26,686 - websocket - INFO - Received message: {'type': 'ping', 'timestamp': '2025-04-12T15:50:26.686Z'}
+2025-04-12 18:50:29,394 - websocket - INFO - Received message: {'type': 'ping', 'timestamp': '2025-04-12T15:50:29.393Z'}
+2025-04-12 18:50:56,831 - websocket - INFO - Received message: {'type': 'ping', 'timestamp': '2025-04-12T15:50:56.831Z'}
+2025-04-12 18:51:05,619 - websocket - INFO - Connection closed in session session_1744470978743
+2025-04-12 18:51:06,493 - root - INFO - Application started
+2025-04-12 18:51:06,494 - root - INFO - Using Ollama API URL: http://localhost:11434/api/generate
+2025-04-12 18:51:06,494 - root - INFO - Using model: llama3
+2025-04-12 18:51:08,126 - websocket - INFO - New connection in session session_1744470978743
+2025-04-12 18:51:08,128 - websocket - INFO - Received message: {'type': 'ping', 'timestamp': '2025-04-12T15:51:08.128Z'}
+2025-04-12 18:51:26,818 - websocket - INFO - Received message: {'type': 'ping', 'timestamp': '2025-04-12T15:51:26.818Z'}
+2025-04-12 18:51:56,511 - root - INFO - Application started
+2025-04-12 18:51:56,511 - root - INFO - Using Ollama API URL: http://localhost:11434/api/generate
+2025-04-12 18:51:56,511 - root - INFO - Using model: llama3
+2025-04-12 18:51:56,819 - websocket - INFO - Received message: {'type': 'ping', 'timestamp': '2025-04-12T15:51:56.818Z'}
+2025-04-12 18:52:04,841 - websocket - INFO - New connection in session session_1744470978743
+2025-04-12 18:52:04,843 - websocket - INFO - Received message: {'type': 'ping', 'timestamp': '2025-04-12T15:52:04.843Z'}
+2025-04-12 18:52:05,843 - websocket - INFO - Connection closed in session session_1744470978743
+2025-04-12 18:52:06,235 - websocket - INFO - New connection in session session_1744470978743
+2025-04-12 18:52:06,241 - websocket - INFO - Received message: {'type': 'ping', 'timestamp': '2025-04-12T15:52:06.240Z'}
+2025-04-12 18:52:08,936 - websocket - INFO - Received message: {'type': 'ping', 'timestamp': '2025-04-12T15:52:08.936Z'}
+2025-04-12 18:52:31,110 - websocket - INFO - Received message: {'type': 'chat', 'content': 'Hello, can you tell me whats the weather currently in Timisoara?', 'id': 'msg_1744473151110', 'timestamp': '2025-04-12T15:52:31.110Z'}
+2025-04-12 18:52:31,111 - agent.thinking - INFO - Initialized thinking process for session session_1744470978743
+2025-04-12 18:52:31,112 - agent.llm - INFO - Initializing LLM with API URL: http://localhost:11434/api/generate and model: llama3
+2025-04-12 18:52:31,112 - agent.base - INFO - LLM initialized for session session_1744470978743
+2025-04-12 18:52:31,122 - agent.base - INFO - Processing user message: Hello, can you tell me whats the weather currently in Timisoara?
+2025-04-12 18:52:31,123 - agent.thinking - INFO - Added thinking step: Received message: {Hello, can you tell me whats th...
+2025-04-12 18:52:31,123 - agent.thinking - INFO - Added thinking step: Processing the message......
+2025-04-12 18:52:31,123 - agent.base - INFO - Generating response (attempt 1/3)
+2025-04-12 18:52:37,447 - agent.thinking - INFO - Added action step: Generating response...
+2025-04-12 18:52:37,448 - agent.thinking - INFO - Added result step: Response generated...
+2025-04-12 18:52:37,448 - agent.thinking - INFO - Added conclusion step: Completed processing the message...
+2025-04-12 18:52:37,449 - agent.thinking - INFO - Saved thinking process to workspace\session_1744470978743\thinking\thinking_1744473151.json
+2025-04-12 18:52:37,449 - agent.thinking - INFO - Completed thinking process for session session_1744470978743
+2025-04-12 18:52:37,449 - websocket - INFO - Received message: {'type': 'ping', 'timestamp': '2025-04-12T15:52:35.928Z'}
+2025-04-12 18:52:57,490 - websocket - INFO - Connection closed in session session_1744470978743
+2025-04-12 18:52:57,490 - asyncio - ERROR - Unclosed client session
+client_session: <aiohttp.client.ClientSession object at 0x000002281E737A10>
+2025-04-12 18:52:57,804 - websocket - INFO - New connection in session session_1744470978743
+2025-04-12 18:52:57,805 - websocket - INFO - Received message: {'type': 'ping', 'timestamp': '2025-04-12T15:52:57.805Z'}
+2025-04-12 18:52:59,495 - websocket - INFO - Connection closed in session session_1744470978743
+2025-04-12 18:52:59,808 - websocket - INFO - New connection in session session_1744470978743
+2025-04-12 18:52:59,814 - websocket - INFO - Received message: {'type': 'ping', 'timestamp': '2025-04-12T15:52:59.813Z'}
+2025-04-12 18:53:01,497 - websocket - INFO - Connection closed in session session_1744470978743
+2025-04-12 18:53:01,809 - websocket - INFO - New connection in session session_1744470978743
+2025-04-12 18:53:01,811 - websocket - INFO - Received message: {'type': 'ping', 'timestamp': '2025-04-12T15:53:01.811Z'}
+2025-04-12 18:53:03,498 - websocket - INFO - Connection closed in session session_1744470978743
+2025-04-12 18:53:03,801 - websocket - INFO - New connection in session session_1744470978743
+2025-04-12 18:53:03,802 - websocket - INFO - Received message: {'type': 'ping', 'timestamp': '2025-04-12T15:53:03.802Z'}
+2025-04-12 18:53:05,499 - websocket - INFO - Connection closed in session session_1744470978743
+2025-04-12 18:53:05,807 - websocket - INFO - New connection in session session_1744470978743
+2025-04-12 18:53:05,809 - websocket - INFO - Received message: {'type': 'ping', 'timestamp': '2025-04-12T15:53:05.809Z'}
+2025-04-12 18:53:05,932 - websocket - INFO - Received message: {'type': 'ping', 'timestamp': '2025-04-12T15:53:05.930Z'}
+2025-04-12 18:53:07,826 - websocket - INFO - Connection closed in session session_1744470978743
+2025-04-12 18:53:08,140 - websocket - INFO - New connection in session session_1744470978743
+2025-04-12 18:53:08,147 - websocket - INFO - Received message: {'type': 'ping', 'timestamp': '2025-04-12T15:53:08.145Z'}
+2025-04-12 18:53:09,841 - websocket - INFO - Connection closed in session session_1744470978743
+2025-04-12 18:53:10,153 - websocket - INFO - New connection in session session_1744470978743
+2025-04-12 18:53:10,155 - websocket - INFO - Received message: {'type': 'ping', 'timestamp': '2025-04-12T15:53:10.155Z'}
+2025-04-12 18:53:10,505 - websocket - INFO - Connection closed in session session_1744470978743

@@ -1,0 +1,41 @@
+{
+  "session_id": "session_1744470978743",
+  "start_time": 1744471502.7917712,
+  "steps": [
+    {
+      "id": "ac4b461b-d24f-429f-97e7-a0083471d457",
+      "type": "thinking",
+      "content": "Received message: {hello AI}",
+      "data": {},
+      "timestamp": 1744471502.8108177
+    },
+    {
+      "id": "58d75486-8641-45a8-bb00-73da2953f94e",
+      "type": "thinking",
+      "content": "Processing the message...",
+      "data": {},
+      "timestamp": 1744471502.8110578
+    },
+    {
+      "id": "ac90a115-b5a7-4271-abd4-cd2ba74b7a89",
+      "type": "action",
+      "content": "Generating response",
+      "data": {},
+      "timestamp": 1744471520.8220985
+    },
+    {
+      "id": "5da998ed-43d8-4502-8d40-aee24d866120",
+      "type": "result",
+      "content": "Response generated",
+      "data": {},
+      "timestamp": 1744471520.8230398
+    },
+    {
+      "id": "ecff06a0-774e-439f-804c-d88b275ccebd",
+      "type": "conclusion",
+      "content": "Completed processing the message",
+      "data": {},
+      "timestamp": 1744471520.8234286
+    }
+  ]
+}

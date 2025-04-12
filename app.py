@@ -1,0 +1,143 @@
+from fastapi import FastAPI, WebSocket, WebSocketDisconnect, Request, HTTPException
+from fastapi.responses import HTMLResponse, JSONResponse
+from fastapi.staticfiles import StaticFiles
+from fastapi.templating import Jinja2Templates
+import uvicorn
+import json
+import os
+import logging
+import datetime
+import aiohttp
+from typing import Dict, List
+
+# Import config variables
+try:
+    from config import OLLAMA_API_URL, OLLAMA_MODEL
+except ImportError:
+    # Default values if not found
+    OLLAMA_API_URL = "http://localhost:11434/api/generate"
+    OLLAMA_MODEL = "llama3"
+    print("Using default config values")
+
+# Import API routes
+from api.websocket import connection_manager, websocket_endpoint
+from api.routes import chat, files, sessions, thinking
+
+# Configure logging
+logging.basicConfig(
+    level=logging.INFO,
+    format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
+    handlers=[
+        logging.FileHandler("app.log"),
+        logging.StreamHandler()
+    ]
+)
+
+app = FastAPI(title="Autonomous AI Agent")
+
+# Import CORS middleware
+from fastapi.middleware.cors import CORSMiddleware
+
+# Configure CORS
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],  # Allows all origins
+    allow_credentials=True,
+    allow_methods=["*"],  # Allows all methods
+    allow_headers=["*"],  # Allows all headers
+)
+
+# Define directory constants
+WORKSPACE_DIR = "workspace"
+STATIC_DIR = "static"
+TEMPLATES_DIR = "templates"
+
+@app.on_event("startup")
+async def startup_event():
+    # Initialize components required for the application
+    # Create necessary directories
+    os.makedirs(WORKSPACE_DIR, exist_ok=True)
+    os.makedirs(STATIC_DIR, exist_ok=True)
+    os.makedirs(TEMPLATES_DIR, exist_ok=True)
+    
+    # Initialize logging
+    logging.info("Application started")
+    
+    # Log configuration information
+    logging.info(f"Using Ollama API URL: {OLLAMA_API_URL}")
+    logging.info(f"Using model: {OLLAMA_MODEL}")
+
+# Mount static files
+app.mount("/static", StaticFiles(directory="static"), name="static")
+
+# Templates
+templates = Jinja2Templates(directory="templates")
+
+# Include API routes
+app.include_router(chat.router, prefix="/api")
+app.include_router(files.router, prefix="/api")
+app.include_router(sessions.router, prefix="/api")
+app.include_router(thinking.router, prefix="/api")
+
+# Test endpoint for session generation
+@app.get("/api/test-session")
+async def test_session():
+    """Test endpoint to check session generation"""
+    session_id = f"test_{datetime.datetime.now().timestamp()}"
+    return {"session_id": session_id, "timestamp": datetime.datetime.now().isoformat()}
+
+# WebSocket endpoint
+@app.websocket("/ws/{session_id}")
+async def websocket_route(websocket: WebSocket, session_id: str):
+    await websocket_endpoint(websocket, session_id)
+
+# Test WebSocket endpoint
+@app.websocket("/ws-test")
+async def websocket_test(websocket: WebSocket):
+    await websocket.accept()
+    try:
+        await websocket.send_json({"message": "Connected to test WebSocket"})
+        while True:
+            data = await websocket.receive_text()
+            logging.info(f"Received test message: {data}")
+            await websocket.send_json({
+                "echo": data, 
+                "timestamp": datetime.datetime.now().isoformat()
+            })
+    except WebSocketDisconnect:
+        logging.info("Client disconnected from test WebSocket")
+
+
+# Test LLM endpoint
+@app.get("/api/test-llm")
+async def test_llm():
+    """Test the LLM connection"""
+    try:
+        from agent.llm import LlamaLLM
+        llm = LlamaLLM()
+        response = await llm.generate("Hello, world!")
+        return {"status": "success", "response": response}
+    except Exception as e:
+        logging.error(f"Error testing LLM: {str(e)}")
+        return {"status": "error", "message": str(e)}
+
+# Root route - serve the main UI
+@app.get("/", response_class=HTMLResponse)
+async def read_root(request: Request):
+    """Root route - serve the main UI."""
+    return templates.TemplateResponse("index.html", {"request": request})
+
+# Error handling
+@app.exception_handler(404)
+async def not_found_handler(request: Request, exc: HTTPException):
+    return templates.TemplateResponse("404.html", {"request": request}, status_code=404)
+
+@app.exception_handler(500)
+async def server_error_handler(request: Request, exc: HTTPException):
+    return templates.TemplateResponse("500.html", {"request": request}, status_code=500)
+
+# Create workspace directory if it doesn't exist
+os.makedirs("workspace", exist_ok=True)
+
+if __name__ == "__main__":
+    uvicorn.run("app:app", host="0.0.0.0", port=8000, reload=True)

@@ -1,0 +1,130 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Autonomous AI Agent</title>
+    <link rel="stylesheet" href="/static/css/main.css">
+    <link rel="stylesheet" href="/static/css/chat.css">
+    <link rel="stylesheet" href="/static/css/sidebar.css">
+    <link rel="stylesheet" href="/static/css/panels.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/default.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
+    <style>
+    /* Connection status indicator */
+    .connection-indicator {
+        position: fixed;
+        bottom: 10px;
+        right: 10px;
+        background-color: rgba(0, 0, 0, 0.7);
+        color: white;
+        padding: 5px 10px;
+        border-radius: 5px;
+        font-size: 12px;
+        z-index: 1000;
+        display: flex;
+        align-items: center;
+    }
+    .status-dot {
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        margin-right: 5px;
+    }
+    .connected { background-color: #4CAF50; }
+    .connecting { background-color: #FFC107; }
+    .disconnected { background-color: #F44336; }
+    </style>
+</head>
+<body>
+    <div class="app-container">
+        <!-- Left Sidebar -->
+        <div class="sidebar">
+            <div class="user-profile">
+                <div class="profile-pic">
+                    <img src="/static/img/user-avatar.png" alt="User Avatar">
+                </div>
+                <div class="user-info">
+                    <h3 class="user-name">User</h3>
+                </div>
+            </div>
+            
+            <div class="chats-container">
+                <div class="chats-header">
+                                    <h3>Chats</h3>
+                    <button id="new-chat-btn" class="new-chat-btn">+ New Chat</button>
+                </div>
+                <div id="chats-list" class="chats-list">
+                    <!-- Chat items will be dynamically added here -->
+                </div>
+            </div>
+        </div>
+        
+        <!-- Main Content Area -->
+        <div class="main-content">
+            <!-- Chat Area -->
+            <div class="chat-area">
+                <div id="messages-container" class="messages-container">
+                    <!-- Messages will be dynamically added here -->
+                </div>
+                
+                <div class="input-container">
+                    <textarea id="message-input" placeholder="Type your message..."></textarea>
+                    <button id="send-button">Send</button>
+                </div>
+            </div>
+            
+            <!-- Right Panel Area -->
+            <div class="panel-area">
+                <div class="panel-tabs">
+                    <button class="tab-button active" data-tab="thinking">Thinking</button>
+                    <button class="tab-button" data-tab="code">Code</button>
+                    <button class="tab-button" data-tab="preview">Preview</button>
+                </div>
+                
+                <div class="panel-content">
+                    <!-- Thinking Panel -->
+                    <div id="thinking-panel" class="panel-tab active">
+                        <div class="thinking-container">
+                            <!-- Thinking steps will be dynamically added here -->
+                        </div>
+                    </div>
+                    
+                    <!-- Code Panel -->
+                    <div id="code-panel" class="panel-tab">
+                        <div class="code-file-tabs">
+                            <!-- File tabs will be dynamically added here -->
+                        </div>
+                        <div class="code-content">
+                            <pre><code id="code-display"></code></pre>
+                        </div>
+                    </div>
+                    
+                    <!-- Preview Panel -->
+                    <div id="preview-panel" class="panel-tab">
+                        <div class="preview-controls">
+                            <button id="refresh-preview">Refresh</button>
+                        </div>
+                        <div class="preview-container">
+                            <iframe id="preview-iframe" sandbox="allow-scripts allow-same-origin"></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="/static/js/main.js"></script>
+    <script src="/static/js/websocket.js"></script>
+    <script src="/static/js/connectionMonitor.js"></script>
+    <script src="/static/js/chatManager.js"></script>
+    <script src="/static/js/thinkingManager.js"></script>
+    <script src="/static/js/fileManager.js"></script>
+    <script src="/static/js/browserManager.js"></script>
+    <script src="/static/js/codePreview.js"></script>
+    <script src="/static/js/chatFix.js"></script>
+    <div id="connection-status" class="connection-indicator">
+        <span class="status-dot connecting"></span> Connecting...
+    </div>
+</body>
+</html>

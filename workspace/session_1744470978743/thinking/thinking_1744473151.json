@@ -1,0 +1,41 @@
+{
+  "session_id": "session_1744470978743",
+  "start_time": 1744473151.1112397,
+  "steps": [
+    {
+      "id": "3f6c59f8-e6cf-4750-9d67-08f93e285ff3",
+      "type": "thinking",
+      "content": "Received message: {Hello, can you tell me whats the weather currently in Timisoara?}",
+      "data": {},
+      "timestamp": 1744473151.1230345
+    },
+    {
+      "id": "a7fd9d47-2f16-4460-992b-5c19023cd20e",
+      "type": "thinking",
+      "content": "Processing the message...",
+      "data": {},
+      "timestamp": 1744473151.1233752
+    },
+    {
+      "id": "1fd5cd12-cbf1-457a-873a-626a03423484",
+      "type": "action",
+      "content": "Generating response",
+      "data": {},
+      "timestamp": 1744473157.4473765
+    },
+    {
+      "id": "7bdb4ff8-4695-4691-b46e-a33584aa5131",
+      "type": "result",
+      "content": "Response generated",
+      "data": {},
+      "timestamp": 1744473157.4481893
+    },
+    {
+      "id": "66513c6f-4e2f-430a-8f7c-3bc15109a128",
+      "type": "conclusion",
+      "content": "Completed processing the message",
+      "data": {},
+      "timestamp": 1744473157.448538
+    }
+  ]
+}

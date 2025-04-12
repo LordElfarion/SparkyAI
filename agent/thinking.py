@@ -1,0 +1,127 @@
+import time
+import uuid
+import asyncio
+import json
+import os
+import logging
+from typing import Dict, List, Optional
+
+logger = logging.getLogger(__name__)
+
+class ThinkingStep:
+    def __init__(self, step_type: str, content: str, data: Optional[Dict] = None):
+        self.id = str(uuid.uuid4())
+        self.type = step_type  # 'thinking', 'action', 'result', 'conclusion'
+        self.content = content
+        self.data = data or {}
+        self.timestamp = time.time()
+        
+    def to_dict(self):
+        return {
+            "id": self.id,
+            "type": self.type,
+            "content": self.content,
+            "data": self.data,
+            "timestamp": self.timestamp
+        }
+
+class ThinkingProcess:
+    def __init__(self, session_id: str, websocket_manager):
+        self.session_id = session_id
+        self.websocket_manager = websocket_manager
+        self.steps: List[ThinkingStep] = []
+        self.start_time = time.time()
+        self.in_progress = True
+        
+        # Create directory for storing thinking logs
+        self.log_dir = os.path.join("workspace", session_id, "thinking")
+        os.makedirs(self.log_dir, exist_ok=True)
+        
+        logger.info(f"Initialized thinking process for session {session_id}")
+        
+    def add_thinking(self, content: str, data: Optional[Dict] = None):
+        """Add a thinking step"""
+        step = ThinkingStep("thinking", content, data)
+        self.steps.append(step)
+        asyncio.create_task(self._notify_update(step))
+        logger.info(f"Added thinking step: {content[:50]}...")
+        return step.id
+        
+    def add_action(self, content: str, data: Optional[Dict] = None):
+        """Add an action step"""
+        step = ThinkingStep("action", content, data)
+        self.steps.append(step)
+        asyncio.create_task(self._notify_update(step))
+        logger.info(f"Added action step: {content[:50]}...")
+        return step.id
+        
+    def add_result(self, content: str, data: Optional[Dict] = None):
+        """Add a result step"""
+        step = ThinkingStep("result", content, data)
+        self.steps.append(step)
+        asyncio.create_task(self._notify_update(step))
+        logger.info(f"Added result step: {content[:50]}...")
+        return step.id
+        
+    def add_conclusion(self, content: str, data: Optional[Dict] = None):
+        """Add a conclusion step"""
+        step = ThinkingStep("conclusion", content, data)
+        self.steps.append(step)
+        asyncio.create_task(self._notify_update(step))
+        logger.info(f"Added conclusion step: {content[:50]}...")
+        self.complete()
+        return step.id
+    
+    def complete(self):
+        """Mark thinking process as complete"""
+        self.in_progress = False
+        self._save_to_file()
+        asyncio.create_task(self._notify_complete())
+        logger.info(f"Completed thinking process for session {self.session_id}")
+    
+    async def _notify_update(self, step: ThinkingStep):
+        """Notify clients of a new thinking step"""
+        try:
+            await self.websocket_manager.send_message({
+                "type": "thinking_update",
+                "step": step.to_dict()
+            }, self.session_id)
+        except Exception as e:
+            logger.error(f"Error notifying thinking update: {str(e)}")
+        
+    async def _notify_complete(self):
+        """Notify clients that thinking is complete"""
+        try:
+            await self.websocket_manager.send_message({
+                "type": "thinking_complete",
+                "duration": time.time() - self.start_time,
+                "steps_count": len(self.steps)
+            }, self.session_id)
+        except Exception as e:
+            logger.error(f"Error notifying thinking complete: {str(e)}")
+    
+    def _save_to_file(self):
+        """Save thinking process to file"""
+        try:
+            filename = f"thinking_{int(self.start_time)}.json"
+            path = os.path.join(self.log_dir, filename)
+            
+            # Create directory if it doesn't exist
+            os.makedirs(self.log_dir, exist_ok=True)
+            
+            # Write thinking data to file
+            with open(path, "w") as f:
+                thinking_data = {
+                    "session_id": self.session_id,
+                    "start_time": self.start_time,
+                    "steps": [step.to_dict() for step in self.steps]
+                }
+                json.dump(thinking_data, f, indent=2)
+            
+            logger.info(f"Saved thinking process to {path}")
+        except Exception as e:
+            logger.error(f"Error saving thinking process: {str(e)}")
+        
+    def get_all_steps(self):
+        """Get all thinking steps"""
+        return [step.to_dict() for step in self.steps]

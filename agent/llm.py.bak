@@ -1,0 +1,167 @@
+﻿import aiohttp
+import json
+import logging
+import asyncio
+import aiohttp
+
+logger = logging.getLogger(__name__)
+
+class LlamaLLM:
+    def __init__(self, model_name="llama3", api_url="http://localhost:11434/api/generate"):
+        """
+        Initialize Llama LLM with Ollama API
+        
+        Args:
+            model_name: The Llama model to use (default: "llama3")
+            api_url: Ollama API URL (default: "http://localhost:11434/api/generate")
+        """
+        self.model_name = model_name
+        self.api_url = api_url
+        self.session = None
+        
+    async def initialize(self):
+        """Initialize the aiohttp session"""
+        if self.session is None:
+            self.session = aiohttp.ClientSession()
+            
+    async def close(self):
+        """Close the aiohttp session"""
+        if self.session:
+            await self.session.close()
+            self.session = None
+            
+    async def generate(self, prompt, system_prompt=None, temperature=0.7, max_tokens=1024):
+        """
+        Generate text using Llama model via Ollama API
+        
+        Args:
+            prompt: The user prompt
+            system_prompt: System prompt to set context
+            temperature: Sampling temperature (0.0 to 1.0)
+            max_tokens: Maximum tokens to generate
+        
+        Returns:
+            Generated text
+            
+        Raises:
+            Exception: If API connection fails or returns an error
+        """
+        """
+        Generate text using Llama model via Ollama API
+        
+        Args:
+            prompt: The user prompt
+            system_prompt: System prompt to set context
+            temperature: Sampling temperature (0.0 to 1.0)
+            max_tokens: Maximum tokens to generate
+        
+        Returns:
+            Generated text
+            
+        Raises:
+            Exception: If API connection fails or returns an error
+        """
+        """
+        Generate text using Llama model via Ollama API
+        
+        Args:
+            prompt: The user prompt
+            system_prompt: System prompt to set context
+            temperature: Sampling temperature (0.0 to 1.0)
+            max_tokens: Maximum tokens to generate
+            
+        Returns:
+            Generated text
+        """
+        await self.initialize()
+        
+        # Format the request based on Ollama API
+        request_data = {
+            "model": self.model_name,
+            "prompt": prompt,
+            "temperature": temperature,
+            "max_tokens": max_tokens,
+        }
+        
+        # Add system prompt if provided
+        if system_prompt:
+            request_data["system"] = system_prompt
+        
+        # Add timeout for API request
+        # Add timeout for API request
+        try:
+            # Set timeout to prevent hanging on API requests
+            request_timeout = 60  # seconds
+            # Set timeout to prevent hanging on API requests
+            request_timeout = 60  # seconds
+            async with self.session.post(self.api_url, json=request_data, timeout=request_timeout) as response:
+                # Check if response status is OK
+                if response.status != 200:
+                    error_text = await response.text()
+                    logger.error(f"API error: {response.status} - {error_text}")
+                    return f"Error connecting to LLM API (Status: {response.status}). Please check your server configuration.
+                response.raise_for_status()
+                result = await response.text()
+                result_json = json.loads(result)
+                return result_json.get("response", "")
+        except asyncio.TimeoutError:
+            logger.error(f"API request timed out after {request_timeout} seconds")
+            return "Error: LLM API request timed out. Please check if the Ollama server is running correctly."
+        except aiohttp.ClientConnectionError:
+            logger.error(f"Cannot connect to API at {self.api_url}")
+            return "Error: Cannot connect to LLM API. Please check if the Ollama server is running."
+        except asyncio.TimeoutError:
+            logger.error(f"API request timed out after {request_timeout} seconds")
+            return "Error: LLM API request timed out. Please check if the Ollama server is running correctly."
+        except aiohttp.ClientConnectionError:
+            logger.error(f"Cannot connect to API at {self.api_url}")
+            return "Error: Cannot connect to LLM API. Please check if the Ollama server is running."
+        except Exception as e:
+            logger.error(f"Error generating text with Llama: {str(e)}")
+            return f"Error generating text: {str(e)}"
+            
+    async def chat(self, messages, temperature=0.7, max_tokens=1024):
+        """
+        Chat with Llama model
+        
+        Args:
+            messages: List of message dictionaries with 'role' and 'content'
+            temperature: Sampling temperature (0.0 to 1.0)
+            max_tokens: Maximum tokens to generate
+            
+        Returns:
+            Generated response
+        """
+        # Extract system message if present
+        system_prompt = None
+        filtered_messages = []
+        
+        for msg in messages:
+            if msg["role"] == "system":
+                system_prompt = msg["content"]
+            else:
+                filtered_messages.append(msg)
+        
+        # Format the conversation for Llama
+        prompt = ""
+        for msg in filtered_messages:
+            role = msg["role"]
+            content = msg["content"]
+            
+            if role == "user":
+                prompt += f"<|user|>\n{content}</s>\n"
+            elif role == "assistant":
+                prompt += f"<|assistant|>\n{content}</s>\n"
+        
+        # Add final assistant prompt
+        prompt += "<|assistant|>\n"
+        
+        # Generate response
+        response = await self.generate(
+            prompt=prompt,
+            system_prompt=system_prompt,
+            temperature=temperature,
+            max_tokens=max_tokens
+        )
+        
+        return response
