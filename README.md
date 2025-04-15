@@ -37,7 +37,7 @@
 
 <ol>
   <li><strong>Clone the repository:</strong><br>
-    <code>git clone https://github.com/Tlgru/SparkyAI.git</code><br>
+    <code>git clone https://github.com/LordElfarion/SparkyAI.git</code><br>
     <code>cd SparkyAI</code>
   </li>
   <br>
